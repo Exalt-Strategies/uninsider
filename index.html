@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src https: data:; connect-src 'self'; form-action 'none'; base-uri 'self'; frame-ancestors 'none'; object-src 'none';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="UN Insider — independent coverage of UN affairs, Security Council decisions, humanitarian crises, and global governance.">
+<meta name="theme-color" content="#0D2340">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-title" content="UN Insider">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="United Nations, UN Security Council, humanitarian, peacekeeping, global governance, international law">
+<meta name="author" content="UN Insider Editorial">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="UN Insider">
+<meta property="og:title" content="UN Insider — Independent Coverage of Global Governance">
+<meta property="og:description" content="Independent reporting on UN affairs, Security Council decisions, humanitarian crises, peacekeeping, and global governance.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://uninsider.example/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1526470498-9ae73c665de8?w=1200&h=630&fit=crop&q=85">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UN General Assembly Hall">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@UNInsider">
+<meta name="twitter:creator" content="@UNInsider">
+<meta name="twitter:title" content="UN Insider — Independent Coverage of Global Governance">
+<meta name="twitter:description" content="Independent reporting on UN affairs, Security Council decisions, humanitarian crises, and global governance.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1526470498-9ae73c665de8?w=1200&h=630&fit=crop&q=85">
+<meta name="twitter:image:alt" content="UN General Assembly Hall">
+
+<link rel="canonical" href="https://uninsider.example/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230D2340'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' text-anchor='middle' fill='%23C9943A'%3EU%3C/text%3E%3C/svg%3E">
+<title>UN Insider — Independent Coverage of Global Governance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --un-blue:#009EDB;--un-dark:#1A3A5C;--un-darker:#0D2340;--un-mid:#2B6CB0;
+  --un-light:#E8F4FB;--un-pale:#F0F7FC;--gold:#C9943A;--gold-lt:#E8B96A;
+  --ink:#1A1A1A;--ink-mid:#3D3D3D;--ink-muted:#6B7280;--rule:#D1DDE8;--cream:#FAFCFE;
+  --serif:'Playfair Display',Georgia,serif;--body:'Source Serif 4',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+  --focus:#2563eb;
+}
+html{background:var(--cream);color:var(--ink);font-family:var(--body)}
+body{min-height:100vh;display:flex;flex-direction:column}
+main{flex:1}
+.view{display:none}.view.active{display:block}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+a{color:var(--un-mid)}
+a:hover{color:var(--un-dark)}
+
+/* RIBBON */
+.ribbon{background:var(--un-darker);color:rgba(255,255,255,0.75);display:flex;align-items:center;justify-content:space-between;padding:6px 40px;font-family:var(--sans);font-size:11px;letter-spacing:0.04em}
+.ribbon a{color:rgba(255,255,255,0.6);text-decoration:none;margin-left:16px}
+.ribbon a:hover{color:#fff}
+
+/* MASTHEAD */
+.masthead{background:#fff;border-bottom:1px solid var(--rule)}
+.masthead-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:20px 40px;gap:24px}
+.masthead-left{display:flex;align-items:center}
+.masthead-right{display:flex;align-items:center;justify-content:flex-end;gap:10px}
+.logo-block{text-align:center}
+.logo-sup{font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:6px}
+.site-logo{font-family:var(--serif);font-size:clamp(38px,6vw,68px);font-weight:700;line-height:1;color:var(--un-dark);cursor:pointer;letter-spacing:-0.01em;background:none;border:0;padding:0}
+.site-logo em{color:var(--gold);font-style:normal}
+.logo-rule{width:60px;height:2px;background:var(--un-blue);margin:10px auto 0}
+.search-form{display:flex;align-items:center;gap:6px}
+.search-input{font-family:var(--sans);font-size:12px;border:1px solid var(--rule);padding:7px 10px;width:180px;background:#fff;outline:none;transition:border-color .15s}
+.search-input:focus{border-color:var(--un-blue)}
+.btn-sub{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:transparent;color:var(--un-dark);border:1.5px solid var(--un-dark);padding:7px 14px;cursor:pointer;transition:all 0.15s}
+.btn-sub:hover{background:var(--un-dark);color:#fff}
+
+/* NAV */
+.blue-stripe{background:var(--un-dark);display:flex;align-items:center;padding:0 40px;overflow-x:auto}
+.blue-stripe button{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:rgba(255,255,255,0.72);background:none;border:0;padding:11px 15px;border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;transition:color 0.15s,border-color 0.15s}
+.blue-stripe button:hover,.blue-stripe button.active{color:#fff;border-bottom-color:var(--gold)}
+
+/* BREAKING */
+.breaking{background:var(--un-blue);color:#fff;display:flex;align-items:center;gap:14px;padding:7px 40px;font-family:var(--sans);font-size:11.5px;overflow:hidden}
+.breaking-pill{background:var(--gold);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;padding:2px 8px;flex-shrink:0}
+.breaking-text{opacity:0.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+
+/* HOME */
+.home-wrap{max-width:1180px;margin:0 auto;padding:36px 40px 80px;display:grid;grid-template-columns:1fr 300px;gap:0 48px}
+
+/* Feature */
+.feature{border-bottom:1px solid var(--rule);padding-bottom:32px;margin-bottom:32px}
+.feature-img{width:100%;height:380px;object-fit:cover;display:block;margin-bottom:20px;background:var(--un-light)}
+.eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--un-blue);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.eyebrow::after{content:'';flex:1;height:1px;background:var(--rule)}
+.feature-hed{font-family:var(--serif);font-size:clamp(26px,4vw,42px);font-weight:700;line-height:1.12;color:var(--un-dark);margin-bottom:12px;cursor:pointer;background:none;border:0;text-align:left;display:block;width:100%;padding:0}
+.feature-hed:hover{text-decoration:underline;text-underline-offset:4px}
+.feature-dek{font-family:var(--body);font-size:17px;font-weight:300;font-style:italic;line-height:1.65;color:var(--ink-mid);margin-bottom:14px}
+.byline-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.byline{font-family:var(--sans);font-size:11.5px;color:var(--ink-muted)}
+.byline strong{color:var(--un-dark);font-weight:600}
+.source-badge{font-family:var(--sans);font-size:10px;letter-spacing:0.05em;color:#fff;background:var(--un-mid);padding:2px 8px}
+
+/* Article grid */
+.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;border-bottom:1px solid var(--rule);padding-bottom:32px;margin-bottom:32px}
+.art-card{cursor:pointer;padding-bottom:8px;border-bottom:1px solid var(--rule);background:none;border-left:0;border-right:0;border-top:0;text-align:left;font:inherit;color:inherit;width:100%;padding-left:0;padding-right:0}
+.art-card-img{width:100%;height:160px;object-fit:cover;display:block;margin-bottom:10px;background:var(--un-light)}
+.art-cat{font-family:var(--sans);font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--un-blue);font-weight:600;margin-bottom:6px}
+.art-card h3{font-family:var(--serif);font-size:18px;font-weight:600;line-height:1.25;color:var(--un-dark);margin-bottom:7px}
+.art-card:hover h3{text-decoration:underline;text-underline-offset:3px}
+.art-card p{font-family:var(--body);font-size:13.5px;line-height:1.6;color:var(--ink-mid);margin-bottom:7px;font-weight:300}
+.art-meta{font-family:var(--sans);font-size:10.5px;color:var(--ink-muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.art-src{background:var(--un-light);color:var(--un-mid);font-size:9.5px;padding:1px 6px;letter-spacing:0.04em}
+
+/* Sidebar */
+.sidebar{border-left:1px solid var(--rule);padding-left:32px}
+.sb-label{font-family:var(--sans);font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-muted);font-weight:600;border-bottom:2px solid var(--un-blue);padding-bottom:7px;margin-bottom:14px}
+.sb-item{padding:10px 0;border-bottom:1px solid var(--rule);cursor:pointer;display:flex;gap:10px;align-items:flex-start;background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;font:inherit;color:inherit}
+.sb-item:last-child{border-bottom:none}
+.sb-thumb{width:60px;height:44px;object-fit:cover;flex-shrink:0;background:var(--un-light)}
+.sb-cat{font-family:var(--sans);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--un-blue);margin-bottom:3px}
+.sb-item h4{font-family:var(--serif);font-size:13.5px;font-weight:600;line-height:1.25;color:var(--un-dark);margin-bottom:2px}
+.sb-item:hover h4{text-decoration:underline;text-underline-offset:2px}
+.sb-meta{font-family:var(--sans);font-size:10px;color:var(--ink-muted)}
+.newsletter{background:var(--un-dark);padding:22px 18px;margin-top:24px}
+.newsletter h4{font-family:var(--serif);font-size:17px;color:var(--gold-lt);margin-bottom:8px;font-weight:600}
+.newsletter p{font-family:var(--sans);font-size:11.5px;line-height:1.65;color:rgba(255,255,255,0.72);margin-bottom:14px}
+.newsletter input{width:100%;padding:7px 10px;font-family:var(--sans);font-size:12px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);color:#fff;margin-bottom:7px;outline:none}
+.newsletter input::placeholder{color:rgba(255,255,255,0.35)}
+.newsletter input:focus{border-color:var(--gold-lt)}
+.newsletter button{width:100%;padding:8px;background:var(--gold);color:#fff;font-family:var(--sans);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;border:none;cursor:pointer}
+.newsletter button:hover{background:var(--gold-lt)}
+.about-box{background:var(--un-light);border-left:3px solid var(--un-blue);padding:16px;margin-top:20px;font-family:var(--sans);font-size:12px;line-height:1.7;color:var(--ink-mid)}
+
+/* ARTICLE VIEW */
+.art-view{max-width:700px;margin:0 auto;padding:0 40px 60px}
+.art-hero{width:100%;max-height:480px;object-fit:cover;display:block;margin-bottom:0}
+.art-hero-cap{font-family:var(--sans);font-size:10.5px;color:var(--ink-muted);padding:6px 0 28px;font-style:italic}
+.art-header{padding-top:28px;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid var(--un-blue)}
+.art-eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--un-blue);font-weight:600;margin-bottom:12px;cursor:pointer;background:none;border:0;padding:0}
+.art-eyebrow:hover{text-decoration:underline}
+.art-title{font-family:var(--serif);font-size:clamp(26px,4.5vw,42px);font-weight:700;line-height:1.12;color:var(--un-dark);margin-bottom:14px}
+.art-dek{font-family:var(--body);font-size:17.5px;font-weight:300;font-style:italic;line-height:1.62;color:var(--ink-mid);margin-bottom:18px}
+.art-meta-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.art-byline{font-family:var(--sans);font-size:12px;color:var(--ink-muted)}
+.art-byline strong{color:var(--un-dark);font-weight:600}
+.art-read-time{font-family:var(--sans);font-size:11px;color:var(--ink-muted);background:var(--un-pale);padding:2px 8px;border:1px solid var(--rule)}
+.art-body{font-family:var(--body);font-size:18px;line-height:1.78;color:var(--ink);font-weight:300}
+.art-body p{margin-bottom:1.5em}
+.art-body h2{font-family:var(--serif);font-size:23px;font-weight:700;color:var(--un-dark);margin:2.2em 0 0.7em}
+.art-body h3{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--un-mid);margin:1.8em 0 0.6em}
+.art-body blockquote{border-left:3px solid var(--un-blue);margin:2em 0;padding:8px 0 8px 22px;font-style:italic;font-size:20px;line-height:1.6;color:var(--un-dark)}
+.art-body img{width:100%;height:auto;display:block;margin:2em 0}
+.art-body .img-caption{font-family:var(--sans);font-size:11px;color:var(--ink-muted);font-style:italic;margin-top:-1.5em;margin-bottom:2em}
+.art-body ul,.art-body ol{margin:0 0 1.5em 1.5em}
+.art-body li{margin-bottom:0.4em}
+.source-note{display:inline-block;background:var(--un-light);border:1px dashed var(--rule);font-family:var(--sans);font-size:11.5px;line-height:1.55;color:var(--ink-mid);padding:10px 14px;margin-top:1.8em !important}
+.art-body a{color:var(--un-mid);text-decoration:underline}
+
+.art-attrib{background:#FFF9E8;border-left:3px solid var(--gold);padding:14px 18px;margin-top:32px;font-family:var(--sans);font-size:12px;line-height:1.6;color:var(--ink-mid);display:flex;gap:10px;align-items:flex-start}
+.art-attrib strong{color:var(--un-dark)}
+
+.art-share{display:flex;gap:8px;margin-top:28px;padding-top:22px;border-top:1px solid var(--rule);flex-wrap:wrap;align-items:center}
+.art-share-label{font-family:var(--sans);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted);margin-right:8px}
+.share-btn{font-family:var(--sans);font-size:11px;font-weight:500;background:#fff;color:var(--un-dark);border:1px solid var(--rule);padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .15s}
+.share-btn:hover{background:var(--un-pale);border-color:var(--un-blue);color:var(--un-dark)}
+
+/* NOT FOUND */
+.not-found{max-width:500px;margin:80px auto;text-align:center;padding:0 40px}
+.not-found-icon{font-size:64px;color:var(--rule);margin-bottom:16px}
+.not-found h2{font-family:var(--serif);font-size:28px;color:var(--un-dark);margin-bottom:10px}
+.not-found p{font-family:var(--sans);font-size:13px;line-height:1.7;color:var(--ink-muted);margin-bottom:24px}
+
+/* EMPTY */
+.empty{padding:60px 0;text-align:center;color:var(--ink-muted)}
+.empty-icon{font-size:36px;color:var(--rule);margin-bottom:12px}
+.empty h3{font-family:var(--serif);font-size:20px;color:var(--un-dark);margin-bottom:6px}
+.empty p{font-family:var(--sans);font-size:12.5px}
+
+/* FOOTER */
+.site-footer{background:var(--un-darker);color:rgba(255,255,255,0.6);padding:36px 40px;font-family:var(--sans);font-size:11.5px;line-height:1.7;margin-top:40px}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+.footer-col h5{font-family:var(--sans);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:600;margin-bottom:10px}
+.footer-col a{color:rgba(255,255,255,0.6);text-decoration:none;display:block;padding:3px 0}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1180px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1);font-size:10.5px;color:rgba(255,255,255,0.4)}
+
+/* TOAST */
+.toast{position:fixed;bottom:28px;right:28px;background:var(--un-dark);color:#fff;font-family:var(--sans);font-size:12px;padding:10px 18px;z-index:9999;letter-spacing:0.04em;pointer-events:none;opacity:0;transition:opacity 0.2s}
+.toast.show{opacity:1}
+
+@media(max-width:900px){
+  .home-wrap{grid-template-columns:1fr;padding:20px}
+  .sidebar{border-left:0;padding-left:0;border-top:1px solid var(--rule);padding-top:32px;margin-top:24px}
+  .masthead-inner{grid-template-columns:1fr;gap:14px;padding:18px 20px}
+  .masthead-left,.masthead-right{justify-content:center}
+  .ribbon,.blue-stripe,.breaking{padding-left:20px;padding-right:20px}
+  .art-view{padding:0 20px 60px}
+  .art-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:22px}
+  .search-input{width:180px}
+  .feature-img{height:240px}
+  .blue-stripe{-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .blue-stripe::-webkit-scrollbar{display:none}
+  .blue-stripe button{padding:14px 14px;font-size:12px}
+  .art-share{gap:10px}
+  .share-btn,.btn-sub{min-height:40px;display:inline-flex;align-items:center}
+}
+
+@media(max-width:520px){
+  .ribbon{padding:6px 16px;font-size:10px;flex-direction:column;gap:4px;align-items:flex-start}
+  .ribbon nav{display:flex;gap:10px}
+  .ribbon a{margin-left:0}
+  .masthead-inner{padding:16px}
+  .site-logo{font-size:40px}
+  .search-form{width:100%}
+  .search-input{flex:1;width:auto;font-size:16px;padding:10px 12px}
+  .btn-sub{padding:10px 14px;font-size:11px}
+  .home-wrap{padding:16px;gap:0 0}
+  .breaking{font-size:11px;padding:7px 16px;gap:10px}
+  .breaking-pill{font-size:8.5px;padding:2px 6px}
+  .feature-img{height:200px}
+  .feature-hed{font-size:26px;line-height:1.18}
+  .feature-dek{font-size:15px}
+  .art-view{padding:0 16px 50px}
+  .art-title{font-size:28px !important;line-height:1.18 !important}
+  .art-dek{font-size:16px !important}
+  .art-body{font-size:17px !important;line-height:1.72 !important}
+  .art-body p{margin-bottom:1em !important}
+  .art-meta-row{flex-direction:column;gap:4px;align-items:flex-start}
+  .art-share{margin-top:22px;padding-top:18px}
+  .share-btn{flex:1 1 auto;text-align:center;min-width:0;padding:10px 10px;font-size:12px}
+  .art-share-label{width:100%;margin:0 0 6px 0}
+  .not-found{padding:50px 20px}
+  .toast{left:16px;right:16px;bottom:16px;text-align:center;font-size:13px;padding:12px 16px}
+  input,textarea,select,button{font-size:16px}
+  .blue-stripe{padding-left:8px;padding-right:8px}
+}
+/* Hide native share when Web Share API unsupported (fallback to button row) */
+.share-btn.native-share{display:none}
+.has-web-share .share-btn.native-share{display:inline-flex}
+
+@media print {
+  .ribbon,.blue-stripe,.breaking,.masthead-right,.sidebar,.art-share,.site-footer,.toast{display:none !important}
+  body{background:#fff}
+  .art-view{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">
+  <span id="ribbonDate"></span>
+  <nav aria-label="Top">
+    <a href="#/" data-route="/">Home</a>
+    <a href="#/about" data-route="/about">About</a>
+    <a href="#/search" data-route="/search">Search</a>
+  </nav>
+</div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="masthead-left">
+      <form class="search-form" id="searchForm" role="search">
+        <input type="search" class="search-input" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+        <button type="submit" class="btn-sub" style="padding:7px 12px">Go</button>
+      </form>
+    </div>
+    <div class="logo-block">
+      <div class="logo-sup">Independent Coverage of Global Governance</div>
+      <button type="button" class="site-logo" onclick="go('/')">UN <em>Insider</em></button>
+      <div class="logo-rule"></div>
+    </div>
+    <div class="masthead-right">
+      <button class="btn-sub" onclick="document.getElementById('newsEmail').focus();window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">Subscribe</button>
+    </div>
+  </div>
+</header>
+
+<nav class="blue-stripe" id="catNav" aria-label="Categories"></nav>
+
+<div class="breaking">
+  <span class="breaking-pill">Latest</span>
+  <span class="breaking-text" id="breakingText" role="button" tabindex="0">Loading…</span>
+</div>
+
+<main>
+<div class="view active" id="homeView">
+  <div class="home-wrap">
+    <div id="mainFeed"></div>
+    <aside class="sidebar">
+      <div class="sb-label">Most Recent</div>
+      <div id="sbRecent"></div>
+      <form class="newsletter" id="newsForm" novalidate>
+        <h4>The UN Insider Brief</h4>
+        <p>A weekly read on Security Council decisions, SG politics, peacekeeping, and multilateral reform.</p>
+        <input type="email" id="newsEmail" placeholder="you@example.com" autocomplete="email" required aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="about-box">
+        <strong style="color:var(--un-dark);font-family:var(--sans)">About UN Insider</strong><br>
+        Independent, reader-supported coverage of the United Nations system. We paraphrase and attribute; we do not plagiarise.
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="view" id="articleView">
+  <img id="aHero" class="art-hero" src="" alt="" style="display:none" loading="lazy">
+  <div class="art-view">
+    <p class="art-hero-cap" id="aHeroCap" style="display:none"></p>
+    <div class="art-header">
+      <button class="art-eyebrow" id="aEyebrow" type="button"></button>
+      <h1 class="art-title" id="aTitle"></h1>
+      <p class="art-dek" id="aDek"></p>
+      <div class="art-meta-row">
+        <span class="art-byline">By <strong id="aAuthor"></strong> &nbsp;·&nbsp; <span id="aDate"></span></span>
+        <span class="art-read-time" id="aReadTime"></span>
+      </div>
+    </div>
+    <div class="art-body" id="aBody"></div>
+    <div class="art-attrib" id="aAttrib" style="display:none">
+      <span style="font-size:14px">ⓘ</span>
+      <span id="aAttribText"></span>
+    </div>
+    <div class="art-share" id="aShare" style="display:none">
+      <span class="art-share-label">Share</span>
+      <button class="share-btn native-share" type="button" id="sNative" aria-label="Share via device">Share…</button>
+      <a class="share-btn" id="sTwitter" href="#" rel="noopener noreferrer" target="_blank">X / Twitter</a>
+      <a class="share-btn" id="sLinkedIn" href="#" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      <a class="share-btn" id="sEmail" href="#">Email</a>
+      <button class="share-btn" type="button" id="sCopy">Copy link</button>
+    </div>
+  </div>
+</div>
+
+<div class="view" id="notFoundView">
+  <div class="not-found">
+    <div class="not-found-icon">✦</div>
+    <h2>Article not found</h2>
+    <p>The article you're looking for may have been removed or the link is incorrect.</p>
+    <button class="btn-sub" onclick="go('/')">Back to Home</button>
+  </div>
+</div>
+
+<div class="view" id="searchView">
+  <div class="home-wrap" style="grid-template-columns:1fr">
+    <div>
+      <h2 style="font-family:var(--serif);font-size:28px;color:var(--un-dark);margin-bottom:18px" id="searchHeading">Search</h2>
+      <form id="searchForm2" role="search" style="margin-bottom:28px;display:flex;gap:8px">
+        <input type="search" id="searchInput2" class="search-input" style="width:100%;max-width:420px" placeholder="Search headlines and article text…" aria-label="Search">
+        <button type="submit" class="btn-sub">Search</button>
+      </form>
+      <div id="searchResults"></div>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h5>UN Insider</h5>
+      <p style="margin-bottom:8px">Independent coverage of the UN system. Articles paraphrase and attribute original reporting; original links are provided in each piece.</p>
+      <p style="font-size:10.5px;color:rgba(255,255,255,0.35)">This is an editorial demonstration. Not affiliated with the United Nations.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Coverage</h5>
+      <a href="#/cat/Security%20Council">Security Council</a>
+      <a href="#/cat/SG%20Election">SG Election</a>
+      <a href="#/cat/Peacekeeping">Peacekeeping</a>
+      <a href="#/cat/Climate">Climate</a>
+      <a href="#/cat/Human%20Rights">Human Rights</a>
+    </div>
+    <div class="footer-col">
+      <h5>Site</h5>
+      <a href="#/">Home</a>
+      <a href="#/search">Search</a>
+      <a href="#/about">About</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="yr"></span> UN Insider · Editorial demonstration. Content paraphrases and attributes sources under fair use.</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+
+// ── SECURITY: escape, url allowlist, body sanitiser ─────────────────────────
+const __ESC={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>__ESC[c]);}
+
+function safeUrl(u){
+  if (!u) return '';
+  const s = String(u).trim();
+  if (/^(https?:|mailto:)/i.test(s)) return s;
+  if (/^#/.test(s)) return s;
+  if (/^\/[^\/]/.test(s)) return s;
+  return '';
+}
+
+const ALLOWED_TAGS = new Set(['p','h2','h3','h4','blockquote','ul','ol','li','strong','em','b','i','u','br','span','img','a','div','hr']);
+const ALLOWED_ATTRS = {
+  '*': new Set(['class']),
+  'a': new Set(['href','title']),
+  'img': new Set(['src','alt','title']),
+};
+const ALLOWED_CLASS = /^(source-note|img-caption)$/;
+
+function sanitizeBodyFragment(html){
+  const tpl = document.createElement('template');
+  tpl.innerHTML = String(html||'');
+  (function walk(root){
+    const kids = Array.from(root.childNodes);
+    for (const n of kids){
+      if (n.nodeType === 8) { n.remove(); continue; }
+      if (n.nodeType !== 1) continue;
+      const tag = n.tagName.toLowerCase();
+      if (!ALLOWED_TAGS.has(tag)){
+        while (n.firstChild) n.parentNode.insertBefore(n.firstChild, n);
+        n.remove();
+        continue;
+      }
+      for (const a of Array.from(n.attributes)){
+        const name = a.name.toLowerCase();
+        const okG = ALLOWED_ATTRS['*'].has(name);
+        const okS = ALLOWED_ATTRS[tag] && ALLOWED_ATTRS[tag].has(name);
+        if (!okG && !okS){ n.removeAttribute(a.name); continue; }
+        if (name === 'class' && !ALLOWED_CLASS.test(a.value)){ n.removeAttribute(a.name); continue; }
+        if (name === 'href' || name === 'src'){
+          const u = safeUrl(a.value);
+          if (!u){ n.removeAttribute(a.name); continue; }
+          n.setAttribute(name, u);
+        }
+      }
+      if (tag === 'a'){
+        n.setAttribute('rel','noopener noreferrer');
+        n.setAttribute('target','_blank');
+      }
+      walk(n);
+    }
+  })(tpl.content);
+  return tpl.content;
+}
+
+function setSafeBody(el, html){
+  el.replaceChildren(sanitizeBodyFragment(html));
+}
+
+// ── STORAGE (Claude artifact storage with localStorage fallback) ───────────
+const SK = 'unins_v5';
+const store = (typeof window !== 'undefined' && window.storage) ? window.storage : {
+  get: async k => ({ value: localStorage.getItem(k) }),
+  set: async (k,v) => localStorage.setItem(k, v),
+};
+
+// ── STATE ──────────────────────────────────────────────────────────────────
+let articles = [];
+let currentCat = 'all';
+const CATS = ['all','Security Council','SG Election','General Assembly','Reform','Human Rights','Peacekeeping','Humanitarian Aid','Climate','Investigation','Opinion'];
+
+// ── SEED DATA — 33 articles ────────────────────────────────────────────────
+const SEED = [
+// ─── ORIGINAL 18 ─────────────────────────────────────────────────────────
+{id:'s1',published:true,cat:'Security Council',
+ hero:'https://images.unsplash.com/photo-1526470498-9ae73c665de8?w=1400&q=80',
+ heroCap:'United Nations Security Council chamber, New York. Photo: Unsplash',
+ headline:"Resolution 2803: The Security Council's Gaza Gamble",
+ dek:"When the Council endorsed the US-backed Comprehensive Plan in November 2025, it staked its credibility on a peace framework with contested legal foundations and an untested governance architecture.",
+ author:'UN Insider Staff',src:'UN Press & Security Council Report',srcUrl:'https://press.un.org/en/2025/sc16225.doc.htm',
+ date:new Date('2026-04-10').getTime(),
+ body:`<p>On November 17, 2025, the UN Security Council adopted Resolution 2803 by a vote of 13 in favour, none against, with China and Russia abstaining. The resolution endorsed the Trump administration's 20-point Comprehensive Plan for Gaza — a document drafted outside the Council's normal working methods and presented for ratification with minimal substantive amendment. What the Council did in adopting it, and what it did not do, will shape the contested politics of Gaza for years.</p><blockquote>"Endorsing is not implementing. The Council's vote is a permission slip, not a plan." — Security Council Report commentary, November 2025</blockquote><h2>The Governance Architecture</h2><p>The plan establishes a Board of Peace chaired by the US President to oversee an Interim Gaza Authority. It authorises an International Stabilisation Force with sweeping permissions — including the authority to disarm non-state armed groups — but names no troop contributors. The two abstaining P5 members objected that the framework bypasses Palestinian political authority and grants extraordinary executive powers to bodies whose composition and accountability are undefined. The Palestinian Authority, notably, was not a negotiating party.</p><p class="source-note">Sources: UN Press SC16225 November 17, 2025; Security Council Report What's In Blue November 2025; Crisis Group briefing December 2025.</p>`},
+
+{id:'s2',published:true,cat:'SG Election',
+ hero:'https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?w=1400&q=80',
+ heroCap:'United Nations General Assembly Hall. Photo: Unsplash',
+ headline:"Five Candidates, One Impossible Job: The 2026 Secretary-General Race",
+ dek:"As interactive dialogues open on April 21, the field vying to succeed António Guterres reflects every tension in modern multilateralism — and the P5 veto that will ultimately decide it.",
+ author:'UN Insider Staff',src:'PassBlue / UN Secretariat / 1 for 8 Billion',srcUrl:'https://www.un.org/en/sg-selection-and-appointment',
+ date:new Date('2026-04-15').getTime(),
+ body:`<p>The formal race to succeed António Guterres begins in public on April 21, when the General Assembly opens interactive dialogues with nominated candidates. Five names are in the running: Rebeca Grynspan (Costa Rica), Mia Mottley (Barbados), Michelle Bachelet (Chile), Rafael Grossi (Argentina) and, late in the cycle, a still-unconfirmed African candidate expected to be put forward by the African Group. The process is transparent, televised, and — on the decisive question — powerless.</p><blockquote>"The interactive dialogues cannot test the most important variable: whether any candidate can win the private acquiescence of all five permanent members simultaneously." — PassBlue</blockquote><h2>The Veto Point</h2><p>Under the UN Charter, the General Assembly appoints the Secretary-General "on the recommendation of the Security Council." In practice, that recommendation requires unanimity among the P5. Russia, China, the United States, the United Kingdom and France each hold an effective veto. The Council's straw polls — in which each P5 member indicates "encourage," "discourage," or "no opinion" — are conducted informally, without public record, and have historically determined the outcome well before the Assembly votes.</p><p class="source-note">Sources: UN Secretariat SG selection page; PassBlue March 2026; 1 for 8 Billion April 2026; CIC/NYU November 25, 2025.</p>`},
+
+{id:'s3',published:true,cat:'Reform',
+ hero:'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1400&q=80',
+ heroCap:'The UN Security Council chamber during a debate. Photo: Unsplash',
+ headline:"The Veto Trap: Why Security Council Reform Remains the UN's Most Intractable Problem",
+ dek:"Seven vetoes in 2024. Four more in 2025. As P5 divisions deepen, reform has never been more urgent — or more stuck.",
+ author:'UN Insider Staff',src:'Security Council Report / Carnegie Endowment / CIVICUS',srcUrl:'https://www.securitycouncilreport.org/monthly-forecast/2026-04/in-hindsight-living-with-the-veto.php',
+ date:new Date('2026-04-05').getTime(),
+ body:`<p>The Intergovernmental Negotiations (IGN) process on Security Council reform has been meeting since 2008. Seventeen years on, the five pillars of reform — categories of membership, the veto, regional representation, size of an enlarged Council, and working methods — remain without consensus text. In that same period, the veto has been used more than two dozen times, with seven vetoes cast in 2024 alone and at least four more by late 2025.</p><blockquote>"Living with the veto is a choice, not an inevitability. But the choice is made every year by the members who benefit from it." — Security Council Report, In Hindsight, April 2026</blockquote><h2>What Reform Would Require</h2><p>Adding new permanent members requires amending the Charter under Article 108 — a two-thirds vote of the General Assembly and ratification by two-thirds of member states, including all five current permanent members. That last requirement is the structural obstacle: no P5 member has an incentive to approve reform that dilutes its own position. The 2022 General Assembly veto initiative — requiring the Assembly to debate any use of the veto within ten days — is the only procedural innovation to have stuck. It has made the veto more costly in reputational terms. It has not made it less frequent.</p><p class="source-note">Sources: Security Council Report April 2026; Carnegie Endowment July 2024; CIVICUS LENS January 2026; UN GA resolution 76/262.</p>`},
+
+{id:'s4',published:true,cat:'Peacekeeping',
+ hero:'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1400&q=80',
+ heroCap:'UN peacekeeping troops on patrol. Photo: Unsplash',
+ headline:"Blue Helmets on a Budget: How America's Funding Retreat Is Hollowing Out UN Peacekeeping",
+ dek:"A $3.7 billion shortfall, a 15 percent mandatory spending cut, and a White House budget that proposes eliminating all US peacekeeping contributions.",
+ author:'UN Insider Staff',src:'UN News / Lowy Institute / Security Council Report / CRS',srcUrl:'https://news.un.org/en/story/2026/04/1167312',
+ date:new Date('2026-04-16').getTime(),
+ body:`<p>In October 2025, Secretary-General Guterres issued an instruction that would have been unthinkable a decade ago: all UN peacekeeping missions were directed to identify spending reductions equivalent to 15 percent of their annual budgets and to repatriate 25 percent of uniformed personnel. The General Assembly had approved a $5.38 billion peacekeeping budget for 2025–2026, but as of late October only 61 member states had fully paid their assessed contributions. Total outstanding amounts stood at approximately $3.7 billion.</p><blockquote>"Our peacekeepers protect people — they make the difference between life and death for hundreds of thousands of civilians." — Jean-Pierre Lacroix, USG for Peace Operations</blockquote><h2>The American Dimension</h2><p>The United States is assessed 26.15 percent of the peacekeeping budget. As of October 2025, US unpaid peacekeeping assessments stood at $2.4 billion. In August 2025, President Trump cancelled roughly $800 million in previously appropriated peacekeeping funds. The White House's FY2026 budget proposed eliminating all US peacekeeping contributions — an 83 percent reduction from the prior year's pre-rescission level. China, now assessed at 23.78 percent of the peacekeeping scale, is the second-largest contributor.</p><p class="source-note">Sources: UN News April 16, 2026; Lowy Institute February 2026; Security Council Report November 2025; CRS IF10354 December 2025.</p>`},
+
+{id:'s5',published:true,cat:'Human Rights',
+ hero:'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=1400&q=80',
+ heroCap:'Humanitarian aid distribution in a conflict zone. Photo: Unsplash',
+ headline:"UNRWA at the Edge: The Slow Dismantling of Gaza's Humanitarian Lifeline",
+ dek:"391 UNRWA staff killed since October 7. 72,315 Palestinians killed through April 2026. A $220 million budget shortfall. And a mandate expiring in June with no political consensus on renewal.",
+ author:'UN Insider Staff',src:'UNRWA / Al Jazeera / OCHA',srcUrl:'https://www.unrwa.org',
+ date:new Date('2026-04-12').getTime(),
+ body:`<p>Between October 7, 2023 and April 8, 2026 — 919 days — 72,315 Palestinians were killed in the Gaza Strip and another 172,137 injured. UNRWA has recorded 391 of its own colleagues killed. No UN agency has ever lost so many staff members in a single conflict in the organisation's history.</p><blockquote>"UNRWA was the backbone of our survival — in health, education, and food. Now, there is nothing." — Jihan al-Harazin, displaced mother of three, Gaza City</blockquote><h2>The Financial Collapse</h2><p>In early 2026, Commissioner-General Philippe Lazzarini announced emergency austerity measures driven by a $220 million budget shortfall: a 20 percent salary cut for local staff in Gaza, reduced working hours, and termination of contracts for approximately 600 staff. Several donors had suspended $440 million in funding following Israeli allegations against UNRWA staff. The agency's 2026 Flash Appeal seeks $1.26 billion. UNRWA's mandate expires June 20, 2026 with no political consensus on renewal.</p><p class="source-note">Sources: UNRWA Situation Reports (March–April 2026); UNRWA 2026 Flash Appeal; Al Jazeera January 30, 2026; OCHA Gaza updates.</p>`},
+
+{id:'s6',published:true,cat:'Reform',
+ hero:'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=1400&q=80',
+ heroCap:'United Nations headquarters, New York City. Photo: Unsplash',
+ headline:"The UN at 80: Is the Organisation Reforming, or Just Surviving?",
+ dek:"Guterres's UN80 initiative promises structural transformation. But with the US proposing to eliminate most of its UN funding and the Global South demanding more than rhetoric, the gap between reform and retrenchment has never been wider.",
+ author:'UN Insider Staff',src:'Council of Councils / CFR / CIVICUS / Carnegie Endowment',srcUrl:'https://www.cfr.org/councilofcouncils/global-memo/the-united-nations-at-eighty-reform-for-a-new-geopolitical-era/',
+ date:new Date('2026-04-08').getTime(),
+ body:`<p>In September 2025, the General Assembly adopted the Pact for the Future. In October, Secretary-General Guterres launched the UN80 initiative, aimed at "deeper, more structural changes and programme alignment within the UN system." The distance between those founding ambitions and the organisation's current operational reality has become a defining political question.</p><blockquote>"The next secretary-general needs to win the acquiescence of all five veto-holders, navigate deep divisions between blocs, and articulate what the UN actually represents." — Council of Councils, CFR</blockquote><h2>What Reform Actually Requires</h2><p>Meaningful reform requires three things simultaneously. First, the United States needs to reengage with multilateral machinery it designed — a calculation the current administration has explicitly rejected. Second, China needs to pair its rising financial weight with genuine respect for a rules-based order. Third, major Global South states need to match rhetoric with resources. None of these three things is currently happening at the scale reform requires.</p><p class="source-note">Sources: CFR Council of Councils January 2026; CIVICUS LENS January 2026; Carnegie Endowment July 2024; CRS IF10354.</p>`},
+
+{id:'s7',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1584515933487-779824d29309?w=1400&q=80',
+ heroCap:'Displaced families in a humanitarian crisis zone. Photo: Unsplash',
+ headline:"Sudan at Three Years: The World's 'Abandoned Crisis' Enters a Fourth Year of War",
+ dek:"34 million people in urgent need. 14 million displaced. Famine confirmed in Darfur. The war between the Sudanese Armed Forces and the RSF has become the world's largest humanitarian catastrophe — and the least-funded response to it.",
+ author:'UN Insider Staff',src:'UN News / OHCHR / OCHA / NPR',srcUrl:'https://news.un.org/en/story/2026/04/1167301',
+ date:new Date('2026-04-15').getTime(),
+ body:`<p>On April 15, 2026, Sudan marked three years since fighting erupted between the Sudanese Armed Forces and the Rapid Support Forces. Nearly 34 million people — 65 percent of Sudan's population — are in urgent need of humanitarian support. Some 14 million have been displaced. Famine has been confirmed in Darfur and the Kordofans. Some estimates suggest as many as 400,000 people have died.</p><blockquote>"As we enter a fourth year of war in Sudan, it is important that we be clear about what this means for women and girls — because ultimately, this is a war on them." — Anna Mutavati, UN Women Regional Director</blockquote><h2>Atrocities and Accountability</h2><p>The UN Fact-Finding Mission found that both the SAF and RSF are responsible for grave violations of international humanitarian law. The RSF's violations have been described as "particularly widespread and systematic." Humanitarians aim to support 20 million people in 2026 but their nearly $3 billion plan remains critically underfunded — UNHCR has received just 16 percent of the $2.8 billion required.</p><p class="source-note">Sources: UN News April 14, 2026; OHCHR April 12, 2026; OCHA Sudan overview; NPR April 15, 2026.</p>`},
+
+{id:'s8',published:true,cat:'Climate',
+ hero:'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&q=80',
+ heroCap:'Climate negotiations at a UNFCCC conference. Photo: Unsplash',
+ headline:"COP31 in Antalya: What the World's Most Unusual Climate Summit Must Deliver",
+ dek:"Türkiye hosts, Australia leads negotiations, the Pacific sets the moral frame — and the US sits out. The November 2026 summit inherits a mandate to convert Paris Agreement promises into verifiable action.",
+ author:'UN Insider Staff',src:'UN in Türkiye / Climate Change News / E3G',srcUrl:'https://en.wikipedia.org/wiki/2026_United_Nations_Climate_Change_Conference',
+ date:new Date('2026-04-14').getTime(),
+ body:`<p>COP31 will convene in Antalya, Türkiye from November 9 to 20, 2026, with a governance structure unlike anything the three-decade-old COP process has seen before. Türkiye serves as formal host and COP31 President. Australia's Minister for Climate Change and Energy, Chris Bowen, serves as President of Negotiations. A Pacific Pre-COP in Fiji gives the world's most climate-vulnerable communities a formal political platform at the very opening of the cycle.</p><blockquote>2023, 2024, and 2025 are the three warmest years on record. The 1.5°C limit, once expected to be breached around 2045, is now projected to be reached as early as May 2029.</blockquote><h2>What COP31 Must Deliver</h2><p>UNEP's November 2025 Emissions Gap Report confirmed current national policies project warming of approximately 2.8°C by 2100 — nearly double the Paris Agreement's aspirational target. COP30 in Belém delivered a $1.3 trillion annual climate finance mobilisation commitment by 2035. The US formally withdrew from the Paris Agreement on January 27, 2026.</p><p class="source-note">Sources: UN in Türkiye December 2025; Climate Change News April 14, 2026; E3G November 2025; Atlantic Council February 2026.</p>`},
+
+{id:'s9',published:true,cat:'Security Council',
+ hero:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80',
+ heroCap:'War damage in an urban conflict zone. Photo: Unsplash',
+ headline:"Ukraine at Four Years: The UN Watches as Diplomacy Stalls and Civilians Die",
+ dek:"More than 15,000 civilians killed. Trilateral talks stalled in Geneva. Russia striking energy infrastructure through sub-zero winters. As the war enters its fifth year, the Security Council remains deadlocked.",
+ author:'UN Insider Staff',src:'UN Press / Security Council Report / UN News',srcUrl:'https://press.un.org/en/2026/sc16302.doc.htm',
+ date:new Date('2026-03-01').getTime(),
+ body:`<p>On February 24, 2026, the Security Council met to mark the fourth anniversary of Russia's full-scale invasion of Ukraine — the same day the General Assembly's Emergency Special Session adopted a resolution titled "Support for lasting peace in Ukraine" by 107 votes in favour to 12 against. The body with legal authority to act remained deadlocked, while the body with only moral authority passed resolutions carrying no binding weight.</p><blockquote>"The parameters of peace in Ukraine are not a mystery. It must accord with international law and uphold Ukraine's sovereignty, independence and territorial integrity." — Rosemary DiCarlo, UN Under-Secretary-General</blockquote><h2>Three Rounds, No Agreement</h2><p>Three rounds of trilateral meetings among Ukraine, Russia, and the United States had taken place through February 2026. Ukraine's Deputy Minister Mariana Betsa was direct: the Kremlin continues to show "no readiness in stopping this aggression, using the negotiation process as a cover to continue this war." The US sought to strip two paragraphs from the General Assembly resolution reaffirming Ukraine's sovereignty; the procedural motion was rejected 69 to 11.</p><p class="source-note">Sources: UN Press SC16302, GA12752 February 24, 2026; Security Council Report February 23, 2026; UN News February 24, 2026.</p>`},
+
+{id:'s10',published:true,cat:'Human Rights',
+ hero:'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1400&q=80',
+ heroCap:'Women and girls at a community gathering. Photo: Unsplash',
+ headline:"No Country in the World Has Achieved Full Legal Equality for Women",
+ dek:"A landmark UN Women report on International Women's Day 2026 found that women globally hold just 64 percent of the legal rights of men — and that conflict-related sexual violence has risen 87 percent in two years.",
+ author:'UN Insider Staff',src:'UN Women / OHCHR / UN News',srcUrl:'https://www.unwomen.org/en/news-stories/press-release/2026/03/no-country-in-the-world-has-reached-full-legal-equality-for-women-and-girls',
+ date:new Date('2026-03-08').getTime(),
+ body:`<p>On International Women's Day 2026, UN Women issued a global alert. Women globally hold just 64 percent of the legal rights of men. In over half of the world's countries — 54 percent — rape is still not defined on the basis of consent. A girl can still be legally forced to marry in nearly three out of four countries. In 44 percent of countries, the law does not mandate equal remuneration for work of equal value.</p><blockquote>"Across the world today, violations of the rights of women and girls are accelerating in a growing culture of impunity — spanning courts, conflict, and online spaces." — Sarah Hendriks, UN Women Director</blockquote><h2>Conflict-Related Sexual Violence Surges</h2><p>The report documented an 87 percent increase in conflict-related sexual violence violations over just two years. 70 percent of women human rights defenders, activists, and journalists report experiencing online violence; nearly one in four have encountered AI-assisted abuse such as deepfake imagery.</p><p class="source-note">Sources: UN Women March 8, 2026; UN News March 4, 2026; OHCHR CEDAW statement February 2026.</p>`},
+
+{id:'s11',published:true,cat:'General Assembly',
+ hero:'https://images.unsplash.com/photo-1594608661623-aa0bd3a69d98?w=1400&q=80',
+ heroCap:'The United Nations General Assembly in session. Photo: Unsplash',
+ headline:"The General Assembly at 80: More Relevant Than Ever, Less Powerful Than Needed",
+ dek:"As the Security Council logs record paralysis, the General Assembly has become the UN's functioning moral compass on Ukraine, Gaza, and reform. But resolutions without enforcement are not governance.",
+ author:'UN Insider Staff',src:'UN Press / PassBlue / Security Council Report',srcUrl:'https://press.un.org/en/2026/ga12752.doc.htm',
+ date:new Date('2026-03-15').getTime(),
+ body:`<p>There is a paradox at the heart of the United Nations General Assembly in 2026. As the Security Council has become progressively less capable of responding to the crises before it — paralysed by the veto on Ukraine, divided on Gaza, absent on Sudan — the General Assembly has stepped into the breach.</p><blockquote>"At a time when the UN is under intense scrutiny and the Security Council remains deadlocked, this Assembly has demonstrated its ability to act as the moral voice of the international community." — Ukraine's Deputy Minister for Foreign Affairs, February 2026</blockquote><p>General Assembly resolutions are not legally binding. They cannot authorise military force, impose sanctions, or compel compliance. General Assembly President Annalena Baerbock has been unusually activist — framing the April 21 dialogues as "a test not only of individual candidates but of the institution itself."</p><p class="source-note">Sources: UN Press GA12752 February 24, 2026; PassBlue January 14, 2026; Security Council Report.</p>`},
+
+{id:'s12',published:true,cat:'Peacekeeping',
+ hero:'https://images.unsplash.com/photo-1524514587686-e2909d726e9b?w=1400&q=80',
+ heroCap:'UN peacekeeping helicopter in a mission area. Photo: Unsplash',
+ headline:"Drone Warfare, Shrinking Budgets, and Fragile Gains: The State of UN Peacekeeping in 2026",
+ dek:"From the Central African Republic to Abyei, UN peacekeeping missions are operating in increasingly volatile environments while facing the deepest financial crisis in the system's history.",
+ author:'UN Insider Staff',src:'UN News / UN Geneva / Security Council Report',srcUrl:'https://news.un.org/en/story/2026/04/1167312',
+ date:new Date('2026-04-17').getTime(),
+ body:`<p>Since 1948, more than two million blue helmets from member states have worked in some of the most hostile environments on earth. More than 4,400 peacekeepers have lost their lives. As the UN marks its 80th anniversary, the system they serve is at what peacekeeping chief Jean-Pierre Lacroix has called "a pivotal juncture."</p><p>In Abyei, drone warfare linked to the Sudan conflict has caused UN casualties and forced UNISFA to abandon key positions. In the Central African Republic, MINUSCA helped support the December 2025 elections, conducted largely peacefully — but the Force Commander cautions the situation remains "uneven and fragile."</p><blockquote>"Some people ask why the peacekeeping missions are still needed. The answer is simple — it's peaceful because the missions have been doing their job." — Colin Stewart, former head of UNFICYP</blockquote><p>Peacekeeping accounts for less than half of one percent of global military spending. The funding crisis does not reflect a world that cannot afford peacekeeping. It reflects one that has chosen to deprioritise it.</p><p class="source-note">Sources: UN News April 16, 2026; UN Geneva October 2025; Security Council Report November 2025.</p>`},
+
+{id:'s13',published:true,cat:'SG Election',
+ hero:'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=1400&q=80',
+ heroCap:'Delegates at a United Nations summit. Photo: Unsplash',
+ headline:"Russia, BRICS, and the Battle to Shape the Next Secretary-General",
+ dek:"As interactive dialogues begin April 21, Russia and its partners have coordinated explicitly on criteria for the next UN chief — revealing just how geopolitical the supposedly administrative selection process has become.",
+ author:'UN Insider Staff',src:'Daily Post Nigeria / 1 for 8 Billion / CIC NYU',srcUrl:'https://dailypost.ng/2026/04/16/russia-allies-strategize-ahead-of-un-secretary-general-election/',
+ date:new Date('2026-04-16').getTime(),
+ body:`<p>The selection of the United Nations Secretary-General has always been a political exercise dressed in administrative language. Article 97 of the UN Charter describes the SG simply as "the chief administrative officer of the Organization."</p><p>Director of Russia's Department of International Organisations, Kirill Logvinov, met with representatives of Moscow's allies to outline Russia's criteria: the next SG must "strictly observe UN Charter principles, pursue an impartial course, and counter the dominance of Western officials within the Secretariat."</p><blockquote>"The 2026 selection is signaling a new kind of political realism. The next Secretary-General will inherit a UN system facing three simultaneous crises: financial insolvency, geopolitical tensions, and a credibility deficit." — CIC/NYU, November 2025</blockquote><p class="source-note">Sources: Daily Post Nigeria April 16, 2026; 1 for 8 Billion April 2026; CIC/NYU November 25, 2025; PassBlue November 18, 2025.</p>`},
+
+{id:'s14',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1400&q=80',
+ heroCap:'Humanitarian workers distributing aid supplies. Photo: Unsplash',
+ headline:"The UN's Liquidity Crisis: When the Organisation Cannot Pay Its Own Bills",
+ dek:"Outstanding UN arrears have reached historic levels. The Trump administration's FY2026 budget proposes eliminating virtually all US contributions — and the cascading consequences are already visible.",
+ author:'UN Insider Staff',src:'Congressional Research Service / OHCHR / Fifth Committee',srcUrl:'https://www.congress.gov/crs-product/IF10354',
+ date:new Date('2026-03-20').getTime(),
+ body:`<p>As of October 2025, US unpaid assessments stood at $1.5 billion for the UN regular budget and $2.4 billion for peacekeeping — $3.9 billion in arrears from a single member state. The Trump administration's FY2026 budget request of $263.8 million for international organisations represents an 83 percent reduction from the FY2025 pre-rescission level.</p><blockquote>"With mounting crises, the world cannot afford a human rights system in crisis." — Volker Türk, UN High Commissioner for Human Rights</blockquote><h2>The Cascading Consequences</h2><p>The CEDAW Committee was forced to cancel one annual session in 2025. The Secretary-General directed all peacekeeping missions to identify 15 percent spending reductions. High Commissioner Türk launched a $400 million 2026 funding appeal for the human rights system.</p><p class="source-note">Sources: CRS IF10354 December 2025; OHCHR CEDAW statement February 2026; UN Press GAAB4502 July 2025.</p>`},
+
+{id:'s15',published:true,cat:'General Assembly',
+ hero:'https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=1400&q=80',
+ heroCap:'Annalena Baerbock at an international forum. Photo: Unsplash',
+ headline:"Baerbock's General Assembly: A Presidency That Refused to Be Ceremonial",
+ dek:"Annalena Baerbock took over the GA80 presidency with an unusually activist posture — calling for more SG candidates, pushing reform, framing the dialogues as a test of the institution itself.",
+ author:'UN Insider Staff',src:'PassBlue / UN Secretariat',srcUrl:'https://passblue.com/2026/01/14/un-general-assembly-chief-calls-for-more-candidates-to-enter-secretary-general-race/',
+ date:new Date('2026-02-10').getTime(),
+ body:`<p>When Annalena Baerbock stepped to the podium on January 14, 2026, she had a message unusually direct for a position that typically operates through carefully hedged diplomatic language. The Secretary-General race could not proceed credibly with only one declared candidate. Member states needed to nominate more. The process demanded it.</p><blockquote>"Baerbock framed the upcoming interactive dialogues as a test not only of individual candidates but of the institution itself." — PassBlue, January 2026</blockquote><p>There is a structural irony in this activism. The General Assembly President can frame debates and convene processes — but formal power in the SG selection ultimately lies with the Security Council's private recommendation process.</p><p class="source-note">Sources: PassBlue January 14 and November 18, 2025; UN Secretariat SG selection page; UN GA resolution 79/327.</p>`},
+
+{id:'s16',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=1400&q=80',
+ heroCap:'Rebuilding efforts in a post-conflict city. Photo: Unsplash',
+ headline:"Syria After Assad: The UN Navigates an Unprecedented Transition",
+ dek:"The Security Council visited Damascus for the first time in December 2025. What it found — and what it committed to — will define how the UN engages with Syria's uncertain reconstruction.",
+ author:'UN Insider Staff',src:'Security Council Report / UN Press',srcUrl:'https://www.securitycouncilreport.org/',
+ date:new Date('2026-02-15').getTime(),
+ body:`<p>In December 2025, the Security Council made history: it visited Damascus for the first time — meeting with women's groups, civil society organisations, and minority community representatives in a country whose political landscape had been transformed by the fall of Bashar al-Assad's government.</p><p>Syria's transition presents the UN system with a challenge distinct from any it has previously managed in the region. Approximately 5.5 million Syrians remain registered as refugees; the country's shattered institutional capacity is still being worked through.</p><blockquote>The Security Council's first-ever visit to Damascus in December 2025 generated commitments to support reconstruction. Whether those commitments translate into resources is the test 2026 will administer.</blockquote><p class="source-note">Sources: Security Council Report February 2026; UN Press SC16284 January 28, 2026.</p>`},
+
+{id:'s17',published:true,cat:'Climate',
+ hero:'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80',
+ heroCap:'Coastal flooding and climate impact on vulnerable communities. Photo: Unsplash',
+ headline:"Loss and Damage: The Climate Finance Fight the Global South Has Already Won in Principle",
+ dek:"The fund exists. The replenishment cycle has been set. But $700 million pledged against losses already running into hundreds of billions annually raises the question of whether the Global South won the argument and lost the resources.",
+ author:'UN Insider Staff',src:'UN in Türkiye / E3G / UNFCCC',srcUrl:'https://turkiye.un.org/en/307475-t%C3%BCrkiye-prepares-host-cop31-look-back-cop30%E2%80%99s-key-outcomes',
+ date:new Date('2026-01-20').getTime(),
+ body:`<p>The operationalisation of the Loss and Damage Fund at COP30 in Belém was, in the framing of its advocates, a historic breakthrough. For the first time, the multilateral climate system formally acknowledged harms from climate change already experienced by the most vulnerable countries.</p><p>Initial pledges stand at approximately $700 million. Estimates of annual loss and damage experienced by developing countries run to hundreds of billions of dollars.</p><blockquote>The headline COP30 finance number — $1.3 trillion annually by 2035 — is a political statement, not a financial commitment. "Mobilise" includes private finance that governments cannot directly command.</blockquote><p class="source-note">Sources: UN in Türkiye December 2025; E3G November 2025; UNFCCC COP31 page.</p>`},
+
+{id:'s18',published:true,cat:'Investigation',
+ hero:'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=80',
+ heroCap:'Budget and finance documents under review. Photo: Unsplash',
+ headline:"Inside the UN's Liquidity Spiral: What Happens When the World's Insurer Can't Pay Claims",
+ dek:"An organisation designed to respond to the world's crises is experiencing a financial crisis of its own. The mechanics of how UN assessments work, why member states don't pay, and what happens when they don't.",
+ author:'UN Insider Staff',src:'Congressional Research Service / Security Council Report / Fifth Committee',srcUrl:'https://www.congress.gov/crs-product/IF10354',
+ date:new Date('2026-03-25').getTime(),
+ body:`<p>Understanding the United Nations' financial crisis requires understanding a system that most of the people who discuss it have not actually read in detail. The UN is funded through assessed contributions — mandatory payments from member states calculated according to a scale reflecting gross national income.</p><blockquote>"The liquidity crisis remains a serious concern and could potentially deepen." — Japan's representative to the Fifth Committee, 2025</blockquote><h2>The Mechanics of Non-Payment</h2><p>Congress capped the US peacekeeping contribution at 25 percent in 1994 — below the actual assessment rate — creating a permanent annual shortfall. Article 19 provides that a member state in arrears for two years loses its vote in the General Assembly. This provision has never been enforced against a P5 member.</p><p class="source-note">Sources: CRS IF10354 December 2025; Security Council Report November 2025; Fifth Committee press releases GAAB4496 and GAAB4502.</p>`},
+
+// ─── NEW 15 (real stories, diverse sources) ───────────────────────────────
+{id:'n1',published:true,cat:'Security Council',
+ hero:'https://images.unsplash.com/photo-1569521488771-c630a20bcf57?w=1400&q=80',
+ heroCap:'Port-au-Prince street under security lockdown. Photo: Unsplash',
+ headline:"Kenya's Mission Ends, the 'Gang Suppression Force' Begins: Haiti's Second Experiment in Outsourced Security",
+ dek:"On March 20, 2026, the last Kenyan police officers flew home. A UN-authorised successor force approved by Resolution 2793 is still being assembled — and much of Port-au-Prince remains under gang control.",
+ author:'UN Insider Staff',src:'Haitian Times / The New Humanitarian / UN Press',srcUrl:'https://press.un.org/en/2025/sc16185.doc.htm',
+ date:new Date('2026-03-21').getTime(),
+ body:`<p>The Security Council unanimously adopted Resolution 2793 on October 2, 2025, transforming the Kenyan-led Multinational Security Support Mission (MSS) into the Gang Suppression Force (GSF) — a UN-backed operation authorised to deploy up to 5,500 personnel. The final 215 Kenyan police officers withdrew from Port-au-Prince on March 20, 2026, closing a mission that arrived in June 2024 with ambitious billing and departed leaving gangs in control of an estimated 85 percent of the capital.</p><blockquote>"Major elements of the new GSF will arrive in the summer of 2026." — UN/US fact sheet, November 2025</blockquote><h2>A Force Still Being Assembled</h2><p>Chad has committed 750 personnel. Jamaica, the Bahamas, Guyana, Barbados, Antigua and Barbuda, Bangladesh and Benin have pledged smaller contingents. Financing remains unresolved; the trust fund supporting the mission is significantly underfunded, and unlike traditional UN peacekeeping the GSF is not financed through assessed contributions. For Haitians, the practical question is whether the new name brings a new capability or simply rebrands the structural gaps that defeated its predecessor.</p><p class="source-note">Sources: UN Press SC16185 (October 2025); The New Humanitarian December 3, 2025; Haitian Times March 20, 2026; CRS IN12331.</p>`},
+
+{id:'n2',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1610715648633-93a1dbfa0961?w=1400&q=80',
+ heroCap:'Refugee camp at dawn. Photo: Unsplash',
+ headline:"123 Million Uprooted: UNHCR's Global Appeal Confronts a World of Permanent Displacement",
+ dek:"Sudan has overtaken Syria as the world's largest forced displacement crisis. UNHCR's 2026 Global Appeal — launched against falling donor budgets — targets a record 136 million people of concern.",
+ author:'UN Insider Staff',src:'UNHCR / Reuters / Concern Worldwide',srcUrl:'https://www.unhcr.org/publications/global-appeal-2026',
+ date:new Date('2026-04-08').getTime(),
+ body:`<p>UNHCR's latest figures put global forced displacement at 123.2 million people at the end of 2024, rising from 117 million a year earlier — an increase of six percent. Mid-2025 estimates registered a small decline to 122.1 million, the first dip in more than a decade, driven by returns to Syria after the fall of the Assad government. The direction of travel, however, has been unmistakable: in the last ten years the global refugee population has nearly doubled, crossing 30.5 million for the first time.</p><blockquote>"Behind every number is a life upended — and a system that is running out of the resources we rely on." — UNHCR Global Appeal 2026</blockquote><h2>Sudan Displaces Syria as the Largest Crisis</h2><p>Sudan is now the world's largest forced displacement situation, with 14.3 million refugees and internally displaced people, overtaking Syria (13.5 million) and followed by Afghanistan (10.3 million) and Ukraine (8.8 million). UNHCR's 2026 Global Appeal sets out plans to protect a record number of displaced and stateless people — even as donor governments, particularly the United States, have signaled major funding reductions.</p><p class="source-note">Sources: UNHCR Global Trends 2024 and Mid-Year Trends 2025; UNHCR Global Appeal 2026; Concern Worldwide — largest refugee crises 2026.</p>`},
+
+{id:'n3',published:true,cat:'Reform',
+ hero:'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1400&q=80',
+ heroCap:'Laboratory vials at a public health research facility. Photo: Unsplash',
+ headline:"The Pandemic Agreement's Missing Piece: Negotiations Extend on the PABS Annex",
+ dek:"WHO member states adopted the Pandemic Agreement in May 2025. The part that would actually make it work — the mechanism for sharing pathogens and the benefits derived from them — has pushed negotiators past their March deadline.",
+ author:'UN Insider Staff',src:'WHO / KFF / Think Global Health',srcUrl:'https://www.who.int/news/item/28-03-2026-who-member-states-agree-to-extend-negotiations-on-key-annex-to-the-pandemic-agreement',
+ date:new Date('2026-03-29').getTime(),
+ body:`<p>On March 28, 2026, WHO member states agreed to extend negotiations on the Pathogen Access and Benefit-Sharing (PABS) annex to the Pandemic Agreement, scheduling additional sessions from April 27 to May 1 before the 79th World Health Assembly in May. The PABS annex is intended to set the terms on which countries share pathogens with pandemic potential — and on which the diagnostics, vaccines and therapeutics developed from those pathogens are distributed back.</p><blockquote>"The accord is only as strong as its annex." — Think Global Health analysis, March 2026</blockquote><h2>What Still Needs to Be Agreed</h2><p>Key unresolved questions include how "affordable prices" are defined, the contractual instruments underpinning a proposed 20 percent allocation of pandemic products to WHO, and the governance arrangements that would ensure equitable distribution in a future outbreak. The United States is not party to the Pandemic Agreement following its withdrawal process from WHO, leaving one of the world's largest producers of pandemic countermeasures outside the framework being built to allocate them.</p><p class="source-note">Sources: WHO news items January 23, February 17 and March 28, 2026; KFF Pandemic Agreement brief; Think Global Health — why pandemic agreement negotiations failed to land.</p>`},
+
+{id:'n4',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1400&q=80',
+ heroCap:'WFP food distribution. Photo: Unsplash',
+ headline:"318 Million Hungry, $13 Billion Short: WFP's 2026 Outlook Finds Two Simultaneous Famines and Half a Budget",
+ dek:"The World Food Programme's Global Outlook projects 318 million people in acute food insecurity in 2026 across 68 countries. Famines have been confirmed in Sudan and — until the October ceasefire — in Gaza. The funding it would take to respond is unlikely to arrive.",
+ author:'UN Insider Staff',src:'WFP / Al Jazeera / IPC',srcUrl:'https://www.wfp.org/publications/wfp-global-outlook',
+ date:new Date('2026-04-02').getTime(),
+ body:`<p>WFP's 2026 Global Outlook estimates 318 million people are facing acute food insecurity — IPC Phase 3 or above — across 68 countries. Forty-one million are at Emergency levels or worse. Six "highest concern" hotspots — Sudan, Gaza and the West Bank, South Sudan, Yemen, Mali and Haiti — contain populations already facing or at risk of Catastrophe conditions (IPC/CH Phase 5).</p><blockquote>"We are being asked to stretch less food further than at any point in this agency's history." — WFP Global Outlook 2026</blockquote><h2>A Ceasefire Pushed Back One Famine, Not Both</h2><p>The latest IPC analysis for Gaza confirms no areas are currently classified as in famine following the October 2025 ceasefire and improved humanitarian access — but 1.6 million people, 77 percent of the population, remain in high levels of acute food insecurity. In Sudan, 25 million people face acute hunger, with famine confirmed in several Darfur and Kordofan localities. WFP estimates its 2026 operational requirement at $13 billion; current forecasts suggest it may receive roughly half that.</p><p class="source-note">Sources: WFP Global Outlook 2026; Al Jazeera November 18, 2025; IPC Gaza Strip analysis; UN agencies joint statement on Gaza famine.</p>`},
+
+{id:'n5',published:true,cat:'Human Rights',
+ hero:'https://images.unsplash.com/photo-1575540670451-70d4c4236be5?w=1400&q=80',
+ heroCap:'Women attending a community session. Photo: Unsplash',
+ headline:"Resolution 2818: UNAMA Extended as the Taliban's Ban on Women at UN Premises Enters Its Seventh Month",
+ dek:"The Security Council unanimously extended the UN Assistance Mission in Afghanistan to June. UN Special Procedures called for an immediate end to a Taliban edict barring Afghan women — including UN staff — from entering UN offices.",
+ author:'UN Insider Staff',src:'UN Press / OHCHR / JURIST',srcUrl:'https://press.un.org/en/2026/sc16317.doc.htm',
+ date:new Date('2026-03-17').getTime(),
+ body:`<p>On March 16, 2026, the Security Council unanimously adopted Resolution 2818, extending UNAMA's mandate until June 17. The renewal came as Taliban de facto authorities entered the seventh month of a policy, imposed in September 2025, that prohibits Afghan women — including UN national staff, contractors and visitors — from entering UN offices and compounds. Council members called on the Taliban to reverse the ban and underscored UNAMA's role in delivering humanitarian assistance.</p><blockquote>"Barring women from UN offices is a direct attack on women's rights, including their right to work. There can be no cultural, religious or administrative justification for this policy." — UN Special Procedures, March 2026</blockquote><h2>A Compounding Health and Rights Crisis</h2><p>OHCHR experts have linked gender-based restrictions and funding cuts to what they describe as a looming catastrophe in Afghanistan's health system. The UN's operational capacity to reach Afghan women has been directly impaired: without female national staff, entire programme areas — from maternal health to nutrition outreach — cannot be delivered at the scale required.</p><p class="source-note">Sources: UN Press SC16317 March 16, 2026; OHCHR press release February and March 2026; JURIST April 2026; UN News SC briefings.</p>`},
+
+{id:'n6',published:true,cat:'Human Rights',
+ hero:'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1400&q=80',
+ heroCap:'Peace Palace at The Hague. Photo: Unsplash',
+ headline:"The Gambia v. Myanmar: The ICJ Finishes Its First Genocide Merits Hearings in More Than a Decade",
+ dek:"Eleven states intervened. Hearings closed January 29, 2026. A judgment is expected later in the year — in a case that has reshaped how international human rights litigation is used.",
+ author:'UN Insider Staff',src:'ICJ / Human Rights Watch / NPR',srcUrl:'https://www.icj-cij.org/case/178',
+ date:new Date('2026-01-30').getTime(),
+ body:`<p>The International Court of Justice opened public hearings on the merits of The Gambia v. Myanmar on January 12, 2026, concluding on January 29. The case, brought under the 1948 Genocide Convention, concerns Myanmar's treatment of the Rohingya — and is the first genocide merits proceeding before the Court in more than a decade. Eleven states formally intervened, an unusually high number.</p><blockquote>"The Rohingya case has already reshaped human rights litigation — before the final judgment." — East Asia Forum, March 2026</blockquote><h2>Parallel Proceedings, Parallel Questions</h2><p>The Gambia v. Myanmar case runs in parallel with South Africa v. Israel — the Gaza genocide case in which the ICJ has extended the deadline for Israel's counter-memorial to January 12, 2026 and in which declarations of intervention were filed on March 12, 2026 by Namibia, the United States, Hungary and Fiji under Article 63. A decision on the merits of the Myanmar case is expected in the second half of 2026.</p><p class="source-note">Sources: ICJ case 178 and case 192 pages; Human Rights Watch January 8, 2026; NPR January 13, 2026; East Asia Forum March 17, 2026.</p>`},
+
+{id:'n7',published:true,cat:'Security Council',
+ hero:'https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?w=1400&q=80',
+ heroCap:'Container ship transiting a contested waterway. Photo: Unsplash',
+ headline:"Yemen, the Red Sea, and the Return of Houthi Attacks: Resolution 2812's Monthly Reporting Extended",
+ dek:"After a five-month pause tied to the Gaza ceasefire, the Houthis resumed attacks on Israel on March 28, 2026. Shipping lanes that had begun to normalise are again thinning out. Special Envoy Grundberg shuttles between capitals.",
+ author:'UN Insider Staff',src:'Security Council Report / UN Press / Al Jazeera',srcUrl:'https://press.un.org/en/2026/sc16274.doc.htm',
+ date:new Date('2026-04-10').getTime(),
+ body:`<p>The Security Council adopted Resolution 2812 in early 2026, extending the Secretary-General's monthly reporting obligation on Houthi attacks in the Red Sea until July 15, 2026. The Houthis had paused operations against international shipping and against Israel on October 10, 2025, when the Gaza peace plan took effect. On March 28, 2026, they resumed attacks on Israel amid the broader regional conflict — though sustained shipping attacks have not, as of this writing, resumed.</p><blockquote>"The threat to Red Sea shipping has grown again, even as hostilities remain below 2024 intensity." — UN Special Envoy for Yemen Hans Grundberg</blockquote><h2>A Ground-Level Crisis Continues</h2><p>Yemen's domestic situation remains catastrophic. Hans Grundberg concluded a three-day visit to Aden on April 9 focused on financial stability, the effects of regional disruption on supply chains, and the prospects for a political settlement. The Council has extended the UN Mission to Support the Hodeidah Agreement through its next review period, as broader ceasefire talks remain on hold.</p><p class="source-note">Sources: UN Press SC16274 (2026); Security Council Report Yemen monthly forecasts January, February and April 2026; MarineLink April 2026.</p>`},
+
+{id:'n8',published:true,cat:'Peacekeeping',
+ hero:'https://images.unsplash.com/photo-1569511166187-11bdf16f0b9a?w=1400&q=80',
+ heroCap:'Armoured UN vehicles on a dirt road. Photo: Unsplash',
+ headline:"MONUSCO Squeezed: South Africa Withdraws, M23 Takes Uvira, and the DRC Mission Plans Its Exit",
+ dek:"The Security Council renewed MONUSCO's mandate to December 2026. Within days, M23 captured Uvira. Within weeks, South Africa announced the withdrawal of its troop contingent. The mission is shrinking faster than its exit plan anticipated.",
+ author:'UN Insider Staff',src:'UN News / Al Jazeera / The Defense Post',srcUrl:'https://news.un.org/en/story/2025/12/1166643',
+ date:new Date('2026-02-08').getTime(),
+ body:`<p>On December 19, 2025, the Security Council unanimously adopted Resolution 2808, extending MONUSCO's mandate until December 20, 2026 with an authorised ceiling of 11,500 military personnel. The following day — December 20 — M23 forces captured Uvira, a strategic South Kivu city, less than a week after Rwandan and Congolese presidents had pledged to pursue a peace agreement at a White House meeting.</p><blockquote>"The phased departure of MONUSCO continues — but any further steps depend on security conditions on the ground." — UN Department of Peace Operations, January 2026</blockquote><h2>South Africa's Pullout</h2><p>On February 8, 2026, South Africa informed the UN Secretary-General of its decision to withdraw its MONUSCO contingent before the end of the year. Congolese forces have since retaken Uvira following an M23 withdrawal. The Council has urged Rwanda to pull its own troops from eastern DRC; Kigali denies their presence. MONUSCO's exit plan — designed for a calmer environment — is being tested against a conflict that is not yet subsiding.</p><p class="source-note">Sources: UN News December 19, 2025; Al Jazeera December 20, 2025; The Defense Post February 8, 2026; Xinhua January 21, 2026; UN Press SC16260.</p>`},
+
+{id:'n9',published:true,cat:'Reform',
+ hero:'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1400&q=80',
+ heroCap:'Abstract artwork evoking neural networks. Photo: Unsplash',
+ headline:"The UN's AI Moment: Geneva Readies for the First Global Dialogue on AI Governance",
+ dek:"A 40-expert Independent Scientific Panel and an annual multilateral dialogue convene for the first time on July 6-7, 2026. The question is whether a consensus forum can shape technology that nation-states are already racing to weaponise.",
+ author:'UN Insider Staff',src:'UN Global Digital Compact / CSIS / TechPolicy.Press',srcUrl:'https://www.un.org/global-dialogue-ai-governance/en',
+ date:new Date('2026-03-25').getTime(),
+ body:`<p>The Global Dialogue on AI Governance holds its first session in Geneva on July 6-7, 2026 — the first annual convening established under the Global Digital Compact adopted by 193 member states in September 2024. In parallel, the Independent International Scientific Panel on AI — 40 experts serving in personal capacity, appointed with gender and geographic balance — is being stood up to produce an annual synthesis of the state of the field.</p><blockquote>"Reaching consensus on AI was the easy part. Turning it into enforceable governance is the hard part." — TechPolicy.Press, 2025</blockquote><h2>What the Mechanism Can — and Cannot — Do</h2><p>The Dialogue is not a treaty body; it is an annual political process. Its formal outputs are expected to be conclusions, capacity-building frameworks, and interoperability guidance. CSIS analysis frames the launch as a power-shift indicator: the Global South has insisted on multilateral AI governance while major AI-producing states have preferred plurilateral forums. Whether Geneva becomes the centre of gravity or a parallel track depends on what the first sessions produce.</p><p class="source-note">Sources: UN Global Dialogue on AI Governance site; Global Digital Compact page; CSIS analysis 2025; TechPolicy.Press — UN Reaches Consensus on AI; UN Foundation — Three Lessons from the GDC.</p>`},
+
+{id:'n10',published:true,cat:'Humanitarian Aid',
+ hero:'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1400&q=80',
+ heroCap:'Rohingya refugee camp in Cox\u2019s Bazar, Bangladesh. Photo: Unsplash',
+ headline:"1.1 Million Rohingya, $934.5 Million Needed: Year Nine of a Crisis Without an Exit",
+ dek:"IOM, UNHCR and 113 partners have launched the 2025-26 Joint Response Plan for Rohingya refugees and host communities in Bangladesh. The plan is more realistic than past ones — and is likely to be funded at well under half.",
+ author:'UN Insider Staff',src:'IOM / UNHCR / UNICEF',srcUrl:'https://www.iom.int/news/un-and-partners-seek-usd-9345m-life-saving-aid-15-million-rohingya-refugees-and-their-hosts-bangladesh',
+ date:new Date('2026-02-20').getTime(),
+ body:`<p>The 2025-26 Joint Response Plan, co-led by IOM and UNHCR under the Government of Bangladesh, seeks $934.5 million to reach 1.48 million people — 1.1 million Rohingya refugees and hundreds of thousands of host community members. The crisis has entered its ninth year. Violence in Rakhine State in 2024 and 2025 pushed another 200,000 Rohingya into Bangladesh, reversing years of stable caseload figures.</p><blockquote>"Their futures remain on hold. Without education and self-reliance, the next generation will be lost to the camps." — UNICEF Rohingya Emergency page</blockquote><h2>A Crisis Living on Annual Appeals</h2><p>More than half the camp population are women and girls facing elevated gender-based violence risks. One in three Rohingya refugees in Bangladesh is aged 10 to 24 with no access to formal education. In Myanmar, the 2026 Humanitarian Needs and Response Plan identifies 16.2 million people in need — 45 percent of the country's population. The structural politics of return have not shifted: there remains no safe, voluntary, dignified pathway for Rohingya to go home.</p><p class="source-note">Sources: IOM news release on 2025-26 JRP; UNHCR Bangladesh country page; UNICEF Rohingya crisis page; UK HMG country policy note January 2026.</p>`},
+
+{id:'n11',published:true,cat:'Peacekeeping',
+ hero:'https://images.unsplash.com/photo-1589913372107-c9e09e9c2c89?w=1400&q=80',
+ heroCap:'UN peacekeeping vehicle at a southern Lebanon checkpoint. Photo: Unsplash',
+ headline:"UNIFIL's Final Year: The Security Council Schedules the End of a 48-Year Mission",
+ dek:"Renewed for the last time in August 2025, UNIFIL will cease operations on December 31, 2026. A new war in Lebanon that began in March 2026 has made the question of what comes next urgent — and unresolved.",
+ author:'UN Insider Staff',src:'Al Jazeera / RTÉ / House of Commons Library',srcUrl:'https://news.un.org/en/story/2025/08/1165736',
+ date:new Date('2026-04-07').getTime(),
+ body:`<p>The Security Council voted unanimously on August 28, 2025 to extend UNIFIL's mandate for a final time, until December 31, 2026, with a year-long withdrawal period to follow. The decision was a compromise: the United States argued Hezbollah had been sufficiently degraded through the 2023-24 war with Israel to justify a near-term end; France, the UK and others warned a rapid drawdown risked creating openings for renewed conflict.</p><blockquote>"There is no state in southern Lebanon that can replace UNIFIL, and no consensus on what should." — Al Jazeera, August 2025</blockquote><h2>A War That Restarted Before the Drawdown</h2><p>Since March 2, 2026, renewed fighting in southern Lebanon has killed more than 1,500 people and displaced nearly a million — roughly 20 percent of Lebanon's population. The Lebanese Armed Forces remain under-resourced; Israel retains positions in five locations in southern Lebanon. Whether the final-year mandate becomes a de facto bridge to a new arrangement, or whether UNIFIL concludes operations into an active conflict, will be the dominant Lebanon file at the Council through 2026.</p><p class="source-note">Sources: UN News August 28, 2025; Al Jazeera August 31, 2025; RTÉ April 6, 2026; House of Commons Library briefings CBP-10348 and CBP-10347.</p>`},
+
+{id:'n12',published:true,cat:'Climate',
+ hero:'https://images.unsplash.com/photo-1439405326854-014607f694d7?w=1400&q=80',
+ heroCap:'Open ocean, far from any coast. Photo: Unsplash',
+ headline:"The High Seas Treaty Enters Into Force — and the Real Work Starts",
+ dek:"On January 17, 2026, the BBNJ Agreement became binding on its parties. It governs half the planet. The first Conference of Parties, expected within a year, will determine whether it becomes enforcement or aspiration.",
+ author:'UN Insider Staff',src:'UN News / High Seas Alliance / World Resources Institute',srcUrl:'https://news.un.org/en/story/2025/09/1165901',
+ date:new Date('2026-01-17').getTime(),
+ body:`<p>The Agreement on Marine Biodiversity of Areas Beyond National Jurisdiction — the BBNJ or High Seas Treaty — entered into force on January 17, 2026, 120 days after Morocco became the 60th state to ratify on September 19, 2025. Eighty-one parties including the EU and 16 of its member states are now legally bound by its provisions. One hundred and forty-five countries have signed.</p><blockquote>"This is the first legal framework that treats half the Earth's surface as a shared responsibility rather than a commons open to any user." — High Seas Alliance, January 2026</blockquote><h2>What the Treaty Does</h2><p>The BBNJ Agreement covers 95 percent of the ocean's volume — waters beyond the 200-nautical-mile exclusive economic zones. Its core provisions enable area-based management tools including marine protected areas, environmental impact assessments for activities on the high seas, capacity building and technology transfer, and a framework for sharing benefits from marine genetic resources. The first BBNJ Conference of Parties is expected within a year and will set rules for implementation — the step that will determine whether the Treaty becomes a functioning regime or a symbolic one.</p><p class="source-note">Sources: UN News September 19, 2025; High Seas Alliance January 16, 2026; EU Oceans and Fisheries January 16, 2026; World Resources Institute explainer.</p>`},
+
+{id:'n13',published:true,cat:'Reform',
+ hero:'https://images.unsplash.com/photo-1498019559366-a1cbd07b5160?w=1400&q=80',
+ heroCap:'World Heritage Site under a hazy sky. Photo: Unsplash',
+ headline:"The US Leaves UNESCO Again: An Eight Percent Budget Hole and a Question About Ukraine's Heritage",
+ dek:"The United States will formally exit UNESCO on December 31, 2026 — its second withdrawal in a decade. The agency has said it is prepared. Protection of heritage in Ukraine, Lebanon and Yemen will be tested.",
+ author:'UN Insider Staff',src:'UNESCO / Brookings / PBS NewsHour / TIME',srcUrl:'https://www.unesco.org/en/articles/withdrawal-united-states-america-unesco-statement-audrey-azoulay-director-general',
+ date:new Date('2026-04-01').getTime(),
+ body:`<p>The Trump administration formally notified UNESCO in July 2025 that the United States would withdraw, effective December 31, 2026 — just over two years after rejoining in 2023. The administration cited the agency's posture on Israel-Palestine issues and broader objections to what it characterised as divisive cultural causes.</p><blockquote>"The budget hole is real. Voluntary contributions have doubled since 2018 — but not enough to replace assessed funding at the scale the United States has historically provided." — Brookings analysis, 2025</blockquote><h2>What the Departure Affects</h2><p>The US departure represents approximately 8 percent of UNESCO's annual budget. The agency has been central to protecting cultural heritage in active conflict: three Ukrainian World Heritage Sites were placed on the endangered list after Russia's 2022 invasion; UNESCO programmes in Lebanon and Yemen support both built heritage and education in emergencies. The withdrawal is also consequential for 26 US World Heritage Sites, which remain listed but lose direct US influence over how UNESCO governs them.</p><p class="source-note">Sources: UNESCO statement by Director-General Audrey Azoulay July 2025; Brookings analysis 2025; PBS NewsHour July 2025; TIME magazine — 26 US World Heritage Sites; UN News July 22, 2025.</p>`},
+
+{id:'n14',published:true,cat:'Peacekeeping',
+ hero:'https://images.unsplash.com/photo-1508015606678-b5d5cec8b97b?w=1400&q=80',
+ heroCap:'A rural landscape in Colombia. Photo: Unsplash',
+ headline:"Ten Years On, Colombia's Verification Mission Is Extended — and Cut",
+ dek:"Resolution 2798 renewed the mandate to October 2026. It also stripped two tasks and imposed a 17 percent resource reduction. Negotiations were the mission's most difficult since 2017.",
+ author:'UN Insider Staff',src:'UN Press / Security Council Report',srcUrl:'https://press.un.org/en/2025/sc16209.doc.htm',
+ date:new Date('2026-01-23').getTime(),
+ body:`<p>On October 31, 2025, the Security Council adopted Resolution 2798 by a vote of 13 in favour with two abstentions (Russia and the United States), extending the UN Verification Mission in Colombia for one year. The mandate strips two previously assigned tasks — verification of restorative sentences handed down by the Special Jurisdiction for Peace, and monitoring implementation of the 2016 agreement's ethnic chapter. The mission proceeds with 200 fewer personnel and a 17 percent resource reduction.</p><blockquote>"Colombia must protect former combatants and accelerate rural reform as the peace agreement reaches ten years." — SRSG to the Security Council, January 2026</blockquote><h2>A Mandate Cycle Changed by US Pressure</h2><p>The main point of contention in the renewal negotiations was a US proposal to remove three mission tasks related to the 2016 Final Agreement's implementation. Two were removed; a third was preserved through intense final-round drafting. The Special Representative briefed the Council on January 23, 2026, framing 2026 as a decisive year for a peace process that has improved on many 2016 metrics but remains vulnerable to armed-group resurgence in rural regions.</p><p class="source-note">Sources: UN Press SC16209 October 31, 2025; SC16281 January 23, 2026; Security Council Report January and April 2026 monthly forecasts.</p>`},
+
+{id:'n15',published:true,cat:'Security Council',
+ hero:'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1400&q=80',
+ heroCap:'A research reactor control room. Photo: Unsplash',
+ headline:"Snapback in Force: UN Sanctions Are Back on Iran, and the IAEA Can't Inspect What It Needs To",
+ dek:"Triggered by France, Germany and the UK in August 2025, the JCPOA snapback mechanism reimposed UN sanctions on September 27, 2025. Russia and China dispute its legality. Iran has limited IAEA access. The resulting information gap may be the most dangerous part.",
+ author:'UN Insider Staff',src:'UN Press / IAEA / Congressional Research Service',srcUrl:'https://press.un.org/en/2026/sc16316.doc.htm',
+ date:new Date('2026-04-06').getTime(),
+ body:`<p>In August 2025, France, Germany and the United Kingdom — the "E3" — invoked the JCPOA snapback mechanism under Security Council Resolution 2231. UN sanctions on Iran were automatically reimposed on September 27, 2025. On April 6, 2026, the Council debated the implementation of those sanctions as Russia and China again challenged the legal standing of the E3 to have triggered the mechanism, arguing the three governments had themselves "ceased to perform" their JCPOA commitments.</p><blockquote>"The Agency has not been able to fulfil its obligations under the NPT Safeguards Agreement in relation to facilities affected by military attacks." — IAEA Director General report, 2026</blockquote><h2>A Verification Hole</h2><p>Iran has provided no information to the International Atomic Energy Agency on the status of its enriched uranium stockpiles following 2025 Israeli and US strikes on nuclear facilities. The IAEA has not received declarations, reports or access for affected sites. The Director General has joined US-Iran bilateral negotiations in an advisory capacity, but absent safeguards access the Agency cannot verify what remains, what has moved, or what has been reconstituted — a gap that will define regional risk well into 2026.</p><p class="source-note">Sources: UN Press SC16316 (April 2026); IAEA Board of Governors document GOV/2026/8; CRS IF11583; Eurasia Review April 2026.</p>`},
+];
+
+// ── STORAGE / LOAD ─────────────────────────────────────────────────────────
+async function loadArticles(){
+  try {
+    const r = await store.get(SK);
+    if (r && r.value) {
+      const parsed = JSON.parse(r.value);
+      if (Array.isArray(parsed)) articles = parsed;
+    }
+    const ids = new Set(articles.map(a => a.id));
+    for (const s of SEED){
+      if (!ids.has(s.id)) articles.push(s);
+    }
+  } catch(e){ articles = [...SEED]; }
+  articles.sort((a,b) => b.date - a.date);
+  renderAll();
+  handleRoute();
+}
+
+// ── ROUTING (hash-based) ───────────────────────────────────────────────────
+function go(path){ location.hash = '#'+path; }
+
+function handleRoute(){
+  const hash = location.hash.replace(/^#/,'') || '/';
+  const parts = hash.split('/').filter(Boolean);
+  if (parts.length === 0) { resetSocialMeta(); document.title = 'UN Insider — Independent Coverage of Global Governance'; showView('home'); return; }
+  const [head, ...rest] = parts;
+  if (head === 'article' && rest[0]){ showArticle(decodeURIComponent(rest[0])); return; }
+  if (head === 'cat' && rest[0]){ currentCat = decodeURIComponent(rest[0]); renderAll(); resetSocialMeta(); showView('home'); return; }
+  if (head === 'search'){ resetSocialMeta(); showSearch(rest.join('/')); return; }
+  if (head === 'about'){ resetSocialMeta(); showView('home'); document.querySelector('.about-box')?.scrollIntoView({behavior:'smooth'}); return; }
+  resetSocialMeta();
+  showView('home');
+}
+window.addEventListener('hashchange', handleRoute);
+
+function showView(name){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const el = document.getElementById(name+'View');
+  if (el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+// ── RENDER: nav + feed + sidebar ───────────────────────────────────────────
+function renderCatNav(){
+  const nav = document.getElementById('catNav');
+  nav.replaceChildren();
+  for (const c of CATS){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = c === 'all' ? 'All' : c;
+    if (c === currentCat) b.classList.add('active');
+    b.addEventListener('click', () => {
+      currentCat = c;
+      if (c === 'all') go('/'); else go('/cat/'+encodeURIComponent(c));
+    });
+    nav.appendChild(b);
+  }
+}
+
+function renderAll(){
+  renderCatNav();
+  let shown = currentCat === 'all' ? [...articles] : articles.filter(a => a.cat === currentCat);
+  shown = shown.filter(a => a.published).sort((a,b) => b.date - a.date);
+
+  const feed = document.getElementById('mainFeed');
+  const sbr = document.getElementById('sbRecent');
+  feed.replaceChildren();
+
+  if (shown.length === 0){
+    feed.innerHTML = `<div class="empty"><div class="empty-icon">\u2726</div><h3>No articles in ${esc(currentCat)}</h3><p>Check back soon.</p></div>`;
+  } else {
+    const feat = shown[0];
+    const feature = document.createElement('div');
+    feature.className = 'feature';
+    feature.innerHTML = `
+      ${feat.hero ? `<img class="feature-img" src="${esc(safeUrl(feat.hero))}" alt="${esc(feat.headline)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+      <div class="eyebrow">${esc(feat.cat)}</div>
+      <button type="button" class="feature-hed" data-id="${esc(feat.id)}">${esc(feat.headline)}</button>
+      <p class="feature-dek">${esc(feat.dek||'')}</p>
+      <div class="byline-row">
+        <span class="byline">By <strong>${esc(feat.author)}</strong> &nbsp;·&nbsp; ${esc(fmtDate(feat.date))}</span>
+        ${feat.src ? `<span class="source-badge">${esc(feat.src)}</span>` : ''}
+      </div>`;
+    feature.querySelector('.feature-hed').addEventListener('click', e => go('/article/'+e.currentTarget.dataset.id));
+    feed.appendChild(feature);
+
+    if (shown.length > 1){
+      const grid = document.createElement('div');
+      grid.className = 'art-grid';
+      for (const a of shown.slice(1)){
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'art-card';
+        card.dataset.id = a.id;
+        card.innerHTML = `
+          ${a.hero ? `<img class="art-card-img" src="${esc(safeUrl(a.hero))}" alt="${esc(a.headline)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+          <div class="art-cat">${esc(a.cat)}</div>
+          <h3>${esc(a.headline)}</h3>
+          <p>${esc(trunc(strip(a.body), 110))}</p>
+          <div class="art-meta"><span>${esc(a.author)}</span><span>·</span><span>${esc(fmtDate(a.date))}</span>${a.src ? `<span class="art-src">${esc(a.src)}</span>` : ''}</div>`;
+        card.addEventListener('click', () => go('/article/'+a.id));
+        grid.appendChild(card);
+      }
+      feed.appendChild(grid);
+    }
+  }
+
+  sbr.replaceChildren();
+  const recent = [...articles].filter(a => a.published).sort((a,b) => b.date - a.date).slice(0,6);
+  for (const a of recent){
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.className = 'sb-item';
+    item.innerHTML = `
+      ${a.hero ? `<img class="sb-thumb" src="${esc(safeUrl(a.hero))}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
+      <div class="sb-text">
+        <div class="sb-cat">${esc(a.cat)}</div>
+        <h4>${esc(a.headline)}</h4>
+        <span class="sb-meta">${esc(fmtDate(a.date))}</span>
+      </div>`;
+    item.addEventListener('click', () => go('/article/'+a.id));
+    sbr.appendChild(item);
+  }
+
+  const latest = recent[0];
+  const bt = document.getElementById('breakingText');
+  if (latest){
+    bt.textContent = latest.headline;
+    bt.onclick = () => go('/article/'+latest.id);
+    bt.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go('/article/'+latest.id); } };
+  }
+}
+
+// ── ARTICLE VIEW ───────────────────────────────────────────────────────────
+function showArticle(id){
+  const a = articles.find(x => x.id === id && x.published);
+  if (!a){ showView('notFound'); return; }
+
+  const hero = document.getElementById('aHero');
+  const heroCap = document.getElementById('aHeroCap');
+  if (a.hero){
+    const u = safeUrl(a.hero);
+    if (u){
+      hero.src = u; hero.alt = a.headline; hero.style.display = 'block';
+      hero.onerror = () => { hero.style.display = 'none'; };
+      if (a.heroCap){ heroCap.textContent = a.heroCap; heroCap.style.display = 'block'; }
+      else heroCap.style.display = 'none';
+    } else { hero.style.display = 'none'; heroCap.style.display = 'none'; }
+  } else { hero.style.display = 'none'; heroCap.style.display = 'none'; }
+
+  const eyebrow = document.getElementById('aEyebrow');
+  eyebrow.textContent = '← ' + a.cat;
+  eyebrow.onclick = () => go('/cat/'+encodeURIComponent(a.cat));
+
+  document.getElementById('aTitle').textContent = a.headline;
+  document.getElementById('aDek').textContent = a.dek || '';
+  document.getElementById('aAuthor').textContent = a.author;
+  document.getElementById('aDate').textContent = fmtDate(a.date);
+
+  const bodyEl = document.getElementById('aBody');
+  setSafeBody(bodyEl, a.body || '');
+
+  const words = (bodyEl.textContent || '').trim().split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 225));
+  document.getElementById('aReadTime').textContent = `${minutes} min read`;
+
+  const attr = document.getElementById('aAttrib');
+  const attrTxt = document.getElementById('aAttribText');
+  if (a.src && a.src !== 'UN Insider Original'){
+    attr.style.display = 'flex';
+    const srcSafe = esc(a.src);
+    const urlSafe = safeUrl(a.srcUrl || '');
+    attrTxt.innerHTML = `Originally sourced from: <strong>${srcSafe}</strong>` +
+      (urlSafe ? ` — <a href="${esc(urlSafe)}" target="_blank" rel="noopener noreferrer">Read original →</a>` : '') +
+      `. UN Insider paraphrases and attributes; we do not claim authorship.`;
+  } else {
+    attr.style.display = 'none';
+  }
+
+  const share = document.getElementById('aShare');
+  share.style.display = 'flex';
+  const pageUrl = location.href;
+  const shareText = a.dek || a.headline;
+  const t = encodeURIComponent(a.headline);
+  const u = encodeURIComponent(pageUrl);
+  const body = encodeURIComponent(`${a.headline}\n\n${shareText}\n\n${pageUrl}`);
+  document.getElementById('sTwitter').href = `https://twitter.com/intent/tweet?text=${t}&url=${u}`;
+  document.getElementById('sLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${u}`;
+  document.getElementById('sEmail').href = `mailto:?subject=${t}&body=${body}`;
+  const copyBtn = document.getElementById('sCopy');
+  copyBtn.onclick = async () => {
+    try { await navigator.clipboard.writeText(pageUrl); toast('Link copied'); }
+    catch { toast('Could not copy'); }
+  };
+  const nativeBtn = document.getElementById('sNative');
+  if (navigator.share) {
+    document.body.classList.add('has-web-share');
+    nativeBtn.onclick = async () => {
+      try { await navigator.share({ title: a.headline, text: shareText, url: pageUrl }); }
+      catch (e) { if (e && e.name !== 'AbortError') toast('Share unavailable'); }
+    };
+  } else {
+    document.body.classList.remove('has-web-share');
+  }
+
+  // Update social meta per-article (helps in-app previews that execute JS)
+  updateSocialMeta({
+    title: `${a.headline} — UN Insider`,
+    description: shareText,
+    url: pageUrl,
+    image: a.hero || '',
+    imageAlt: a.headline,
+    type: 'article',
+  });
+
+  showView('article');
+  document.title = a.headline + ' — UN Insider';
+}
+
+function updateSocialMeta({ title, description, url, image, imageAlt, type }){
+  const setMeta = (sel, val) => {
+    const el = document.querySelector(sel);
+    if (el && val != null) el.setAttribute('content', val);
+  };
+  setMeta('meta[name="description"]', description);
+  setMeta('meta[property="og:title"]', title);
+  setMeta('meta[property="og:description"]', description);
+  setMeta('meta[property="og:url"]', url);
+  setMeta('meta[property="og:type"]', type || 'website');
+  if (image) {
+    setMeta('meta[property="og:image"]', image);
+    setMeta('meta[property="og:image:alt"]', imageAlt || '');
+    setMeta('meta[name="twitter:image"]', image);
+    setMeta('meta[name="twitter:image:alt"]', imageAlt || '');
+  }
+  setMeta('meta[name="twitter:title"]', title);
+  setMeta('meta[name="twitter:description"]', description);
+  const canon = document.querySelector('link[rel="canonical"]');
+  if (canon && url) canon.setAttribute('href', url);
+}
+
+function resetSocialMeta(){
+  updateSocialMeta({
+    title: 'UN Insider — Independent Coverage of Global Governance',
+    description: 'Independent reporting on UN affairs, Security Council decisions, humanitarian crises, and global governance.',
+    url: location.href,
+    image: 'https://images.unsplash.com/photo-1526470498-9ae73c665de8?w=1200&h=630&fit=crop&q=85',
+    imageAlt: 'UN General Assembly Hall',
+    type: 'website',
+  });
+}
+
+// ── SEARCH ─────────────────────────────────────────────────────────────────
+function showSearch(q){
+  const val = q ? decodeURIComponent(q) : '';
+  document.getElementById('searchInput2').value = val;
+  document.getElementById('searchInput').value = val;
+  runSearch(val);
+  showView('search');
+}
+
+function runSearch(q){
+  const results = document.getElementById('searchResults');
+  const heading = document.getElementById('searchHeading');
+  const needle = (q||'').toLowerCase().trim();
+  if (!needle){
+    heading.textContent = 'Search';
+    results.innerHTML = '<p style="font-family:var(--sans);color:var(--ink-muted);font-size:13px">Enter a keyword — e.g. <em>peacekeeping</em>, <em>Gaza</em>, <em>snapback</em>.</p>';
+    return;
+  }
+  const hits = articles.filter(a => a.published).filter(a => {
+    const hay = (a.headline + ' ' + (a.dek||'') + ' ' + strip(a.body) + ' ' + (a.src||'') + ' ' + a.cat).toLowerCase();
+    return hay.includes(needle);
+  }).sort((a,b) => b.date - a.date);
+  heading.textContent = `Search — “${q}” · ${hits.length} result${hits.length===1?'':'s'}`;
+  results.replaceChildren();
+  if (hits.length === 0){
+    results.innerHTML = '<p style="font-family:var(--sans);color:var(--ink-muted);font-size:13px">No matching articles.</p>';
+    return;
+  }
+  const grid = document.createElement('div');
+  grid.className = 'art-grid';
+  grid.style.borderBottom = 'none';
+  for (const a of hits){
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'art-card';
+    card.innerHTML = `
+      ${a.hero ? `<img class="art-card-img" src="${esc(safeUrl(a.hero))}" alt="${esc(a.headline)}" loading="lazy" onerror="this.style.display='none'">` : ''}
+      <div class="art-cat">${esc(a.cat)}</div>
+      <h3>${esc(a.headline)}</h3>
+      <p>${esc(trunc(strip(a.body), 110))}</p>
+      <div class="art-meta"><span>${esc(a.author)}</span><span>·</span><span>${esc(fmtDate(a.date))}</span></div>`;
+    card.addEventListener('click', () => go('/article/'+a.id));
+    grid.appendChild(card);
+  }
+  results.appendChild(grid);
+}
+
+// ── NEWSLETTER + SEARCH FORMS ──────────────────────────────────────────────
+document.getElementById('newsForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('newsEmail').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ toast('Enter a valid email'); return; }
+  document.getElementById('newsEmail').value = '';
+  toast('Subscribed (demo) ✓');
+});
+document.getElementById('searchForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('searchInput').value.trim();
+  go('/search/'+encodeURIComponent(v));
+});
+document.getElementById('searchForm2').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = document.getElementById('searchInput2').value.trim();
+  go('/search/'+encodeURIComponent(v));
+});
+
+// ── KEYBOARD: Escape returns to home from article/search/notFound ──────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape'){
+    const active = document.querySelector('.view.active');
+    if (active && active.id !== 'homeView') go('/');
+  }
+});
+
+// ── TOAST ──────────────────────────────────────────────────────────────────
+let toastTimer = null;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ── UTILS ──────────────────────────────────────────────────────────────────
+function strip(h){
+  const tpl = document.createElement('template');
+  tpl.innerHTML = String(h||'');
+  return (tpl.content.textContent||'').replace(/\s+/g,' ').trim();
+}
+function trunc(s,n){ return s.length>n ? s.slice(0,n).trimEnd()+'…' : s; }
+function fmtDate(ts){ return new Date(ts).toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}); }
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+const d = new Date();
+document.getElementById('ribbonDate').textContent =
+  d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}) + ' · New York';
+document.getElementById('yr').textContent = d.getFullYear();
+loadArticles();
+</script>
+</body>
+</html>
